@@ -1,3 +1,5 @@
+package introduction.conditional_blocks;
+
 import java.util.Scanner;
 
 public class IfElseExerciseSeason {

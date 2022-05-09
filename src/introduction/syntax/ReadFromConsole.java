@@ -1,3 +1,5 @@
+package introduction.syntax;
+
 import java.util.Scanner;
 
 public class ReadFromConsole {

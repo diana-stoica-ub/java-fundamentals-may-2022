@@ -1,3 +1,5 @@
+package introduction.syntax;
+
 public class PrimitivesExercise {
 
     public static void main(String[] args) {

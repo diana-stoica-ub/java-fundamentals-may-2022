@@ -1,3 +1,5 @@
+package introduction.syntax;
+
 public class OperatorsExercise {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package introduction.loop_blocks;
+
 import java.util.Scanner;
 
 public class PrimeNumberExercise {
