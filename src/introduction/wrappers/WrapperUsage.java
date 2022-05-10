@@ -1,5 +1,7 @@
 package introduction.wrappers;
 
+import relationship.inheritance.classes.Animal;
+
 public class WrapperUsage {
 
     public static void main(String[] args) {
