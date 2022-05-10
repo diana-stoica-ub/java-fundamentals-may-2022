@@ -1,5 +1,7 @@
 package introduction.classes;
 
+import java.util.Objects;
+
 public class TestClasses {
 
     public static void main(String[] args) {
@@ -19,6 +21,22 @@ public class TestClasses {
                 + employee2.getContractType().getMessage() + " " +
                 + employee2.getContractType().getNumberOfHoursWorked());
         System.out.println(employee2.getSalary());
+
+
+        //objects equality
+        Person p1 = new Person("John", "Doe");
+        Person p2 = new Person("John", "Doe");
+        Person p3 = p1;     //p1 == p3 => true
+
+        if (p1.equals(p2)) {
+            System.out.println("Equal objects");
+        } else {
+            System.out.println("Not equal objects");
+        }
+
+        if (Objects.equals(p1, p2)) {
+            System.out.println("Equal objects");
+        }
 
     }
 }
