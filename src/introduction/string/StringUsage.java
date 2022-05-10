@@ -44,5 +44,7 @@ public class StringUsage {
         System.out.println(result);
         result = line.substring(3, 5);
         System.out.println(result);
+
+        char[] charArray = result.toCharArray();
     }
 }
