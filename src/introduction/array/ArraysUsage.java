@@ -41,13 +41,13 @@ public class ArraysUsage {
 
     }
 
-    private static void printArray(int[] array) {
+    public static void printArray(int[] array) {
         for (int value : array) {
             System.out.print(value + " ");
         }
         System.out.println();
     }
-    private static int[] generateRandomArray() {
+    public static int[] generateRandomArray() {
         int[] numbers = new int[10];
 
         Random random = new Random();
