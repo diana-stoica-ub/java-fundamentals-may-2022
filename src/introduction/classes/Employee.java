@@ -3,12 +3,13 @@ package introduction.classes;
 public class Employee {
 
     //atribute, mebrii, fields, data
-    long id;
-    String firstName;
-    String lastName;
-    int age;
-    boolean active;
-    long salary;
+    private long id;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private boolean active;
+    private long salary;
+    private ContractType contractType;
 
     //constructor
 
@@ -31,20 +32,74 @@ public class Employee {
         this.salary = salary;
     }
 
+    //getters and setters
+    public ContractType getContractType() {
+        return contractType;
+    }
+
+    public void setContractType(ContractType contractType) {
+        this.contractType = contractType;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
     //metode
-    void printAge() {
+    public void printAge() {
         System.out.println("Employee age: " + age);
     }
 
-    void fireEmployee() {
+    public void fireEmployee() {
         this.active = false;
     }
 
-    long getId() {
-        return this.id;
-    }
 
-    void givePromotion(long newSalary) {
+    public void givePromotion(long newSalary) {
         this.salary = newSalary;
     }
 

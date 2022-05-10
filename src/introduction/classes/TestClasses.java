@@ -8,13 +8,17 @@ public class TestClasses {
         employee.printAge();
 
         Employee employee2 = new Employee("Ion", "Popescu");
-        System.out.println(employee2.firstName);
-        System.out.println(employee2.lastName);
+        System.out.println(employee2.getFirstName());
+        System.out.println(employee2.getLastName());
 
-        employee2.salary = 100;
+        employee2.setSalary(100);
+        employee2.setContractType(ContractType.FULL_TIME);
         employee2.givePromotion(200);
 
-        System.out.println(employee2.salary);
+        System.out.println("employee2 contract: "
+                + employee2.getContractType().getMessage() + " " +
+                + employee2.getContractType().getNumberOfHoursWorked());
+        System.out.println(employee2.getSalary());
 
     }
 }
