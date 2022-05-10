@@ -38,5 +38,12 @@ public class TestClasses {
             System.out.println("Equal objects");
         }
 
+        Person[] people = new Person[10];
+        people[0] = p1;
+        people[1] = p2;
+        for (Person p : people) {
+            System.out.println(p);
+        }
+
     }
 }
