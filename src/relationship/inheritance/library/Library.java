@@ -30,7 +30,8 @@ public class Library {
     public static void returnBook(String name) {
         ToGoBook book = findBookInDatabase(name);
         if (book == null) {
-            System.out.println("Book not found");
+            //System.out.println("Book not found");
+            throw new RuntimeException("Book not found");
         } else {
             book.returnBook();
         }
