@@ -37,4 +37,13 @@ public class Client implements Person {
     public void setCnp(String cnp) {
         this.cnp = cnp;
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", cnp='" + cnp + '\'' +
+                '}';
+    }
 }

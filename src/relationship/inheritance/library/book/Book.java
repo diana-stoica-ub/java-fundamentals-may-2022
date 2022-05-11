@@ -47,4 +47,14 @@ public abstract class Book {
     public void setLocation(Integer location) {
         this.location = location;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author=" + author +
+                ", genre=" + genre +
+                ", location=" + location +
+                '}';
+    }
 }

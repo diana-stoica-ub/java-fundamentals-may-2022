@@ -6,10 +6,20 @@ import relationship.inheritance.library.person.Author;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Generate books and clients:");
         generateBooks();
         generateClients();
         Library.printBooks();
         Library.printClients();
+
+        System.out.println("Rent books:");
+        Library.rentBook("Book4", "CNP1");
+        Library.rentBook("Book5", "CNP2");
+        Library.printBooks();
+
+        System.out.println("Return books:");
+        Library.returnBook("Book4");
+        Library.printBooks();
 
     }
 
@@ -24,7 +34,7 @@ public class Main {
 
         Library.registerBook("Book1", author, Genre.SF, 1, true);
         Library.registerBook("Book2", author, Genre.STORY, 1, true);
-        Library.registerBook("Book3", author, Genre.SF, 1, true);
+        Library.registerBook("Book3", author, Genre.SF, 1, false);
         Library.registerBook("Book4", author, Genre.SF, 1, false);
         Library.registerBook("Book5", author, Genre.POETRY, 1, false);
     }

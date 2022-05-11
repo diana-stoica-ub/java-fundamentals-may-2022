@@ -18,4 +18,11 @@ public class ToStayBook extends Book {
     public void setCanBeViewed(boolean canBeViewed) {
         this.canBeViewed = canBeViewed;
     }
+
+    @Override
+    public String toString() {
+        return "ToStayBook{" +
+                "canBeViewed=" + canBeViewed +
+                "} " + super.toString();
+    }
 }

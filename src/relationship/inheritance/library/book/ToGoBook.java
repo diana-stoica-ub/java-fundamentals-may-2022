@@ -39,4 +39,10 @@ public class ToGoBook extends Book {
         client = null;
     }
 
+    @Override
+    public String toString() {
+        return "ToGoBook{" +
+                "client=" + client +
+                "} " + super.toString();
+    }
 }
