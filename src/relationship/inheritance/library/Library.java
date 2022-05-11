@@ -15,6 +15,18 @@ public class Library {
     private static int noOfBooks = 0;
     private static int noOfClients = 0;
 
+    public static void printBooks() {
+        for (int i = 0 ; i< noOfBooks; i++) {
+            System.out.println(books[i]);
+        }
+    }
+
+    public static void printClients() {
+        for (int i = 0; i < noOfClients; i++) {
+            System.out.println(clients[i]);
+        }
+    }
+
     public static void returnBook(String name) {
         ToGoBook book = findBookInDatabase(name);
         if (book == null) {
