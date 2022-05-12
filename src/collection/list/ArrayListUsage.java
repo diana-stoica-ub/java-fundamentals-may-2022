@@ -5,7 +5,7 @@ import collection.NameComparator;
 
 import java.util.*;
 
-import static collection.ListPrinter.printArray;
+import static collection.CollectionPrinter.printArray;
 
 public class ArrayListUsage {
 
