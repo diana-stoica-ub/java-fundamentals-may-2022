@@ -5,6 +5,8 @@ import collection.NameComparator;
 
 import java.util.*;
 
+import static collection.ListPrinter.printArray;
+
 public class ArrayListUsage {
 
     public static void main(String[] args) {
@@ -166,10 +168,5 @@ public class ArrayListUsage {
 
     }
 
-    private static <E> void printArray(List<E> array) {
-        for (E element : array) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
-    }
+
 }
