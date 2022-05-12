@@ -1,5 +1,8 @@
 package collection.list;
 
+import collection.Employee;
+import collection.NameComparator;
+
 import java.util.*;
 
 public class ArrayListUsage {
@@ -117,6 +120,9 @@ public class ArrayListUsage {
             String fruitObject = (String) object;
         }
 
+        int index = Collections.indexOfSubList(fruits, Arrays.asList("Pear", "Blackberry"));
+        System.out.println("Index of sublist: " + index);
+
         System.out.print("Sub-list:");
         List<String> subList = fruits.subList(1, 3);
         printArray(subList);
@@ -127,6 +133,36 @@ public class ArrayListUsage {
         fruits.add("Apple");
         printArray(fruits);
 
+        List<String> emptyList = Collections.EMPTY_LIST;
+
+
+        List<Employee> employees = new ArrayList<>();
+        employees.add(new Employee("Nume1", "Prenume1", 100));
+        employees.add(new Employee("Nume3", "Prenume3", 90));
+        employees.add(new Employee("Nume2", "Prenume2", 100));
+
+        System.out.print("\n\nEmployee array:");
+        printArray(employees);
+        System.out.println("Max salary from collection: " + Collections.max(employees).getSalary());
+        System.out.println("Min salary from collection: " + Collections.min(employees).getSalary());
+
+        NameComparator nameComparator = new NameComparator();
+        System.out.println("Max from collection using comparator: " + Collections.max(employees, nameComparator));
+        System.out.println("Min from collection using comparator: " + Collections.min(employees, nameComparator));
+
+        System.out.println("Sort array:");
+        Collections.sort(employees);
+        printArray(employees);
+
+        System.out.println("Sort array using comparator");
+        Collections.sort(employees, nameComparator);
+        printArray(employees);
+
+        employees.sort(nameComparator);
+
+        System.out.println("Fill..");
+        Collections.fill(employees, new Employee("New", "New", 2));
+        printArray(employees);
 
     }
 
