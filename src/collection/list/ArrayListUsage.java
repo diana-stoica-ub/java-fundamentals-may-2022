@@ -1,8 +1,6 @@
 package collection.list;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class ArrayListUsage {
 
@@ -61,6 +59,72 @@ public class ArrayListUsage {
         System.out.println("Remove element: by collection none found");
         resultBoolean = fruits.removeAll(Arrays.asList("BlueGrape", "WhitePear", "Blueberry")); //falsem oentru ca nu a reusit sa stearga nimic
         System.out.println("Result: " + resultBoolean);
+        printArray(fruits);
+
+        fruits.addAll(Arrays.asList("Cherry", "Pear", "Orange", "Apple", "Blackberry", "Watermellon"));
+        printArray(fruits);
+
+        System.out.println("Array size: " + fruits.size()); //numarul de elemente din ArrayList
+
+        System.out.println("Iterate using for-each loop:");
+        for (String element : fruits) {
+            System.out.print(element + " ");
+        }
+
+        System.out.println("\nIterate using for loop");
+        for (int i = 0; i < fruits.size(); i++) {
+            System.out.print(fruits.get(i) + " ");
+        }
+
+        System.out.println("\nIterate using iterator:");
+        Iterator<String> iterator = fruits.iterator();
+
+        while (iterator.hasNext()) {
+            String element = iterator.next();       //nu trebuie sa uitam sa apelam next
+            if (element.equals("Orange")) {
+                iterator.remove();      //remove trebuie apelat dupa next, nu inainte
+            }
+        }
+        printArray(fruits);
+
+        System.out.println("Iterate backwards using iterator: ");
+        ListIterator<String> listIterator = fruits.listIterator(fruits.size());
+
+        while (listIterator.hasPrevious()) {
+            String element = listIterator.previous();
+            System.out.print(element + "-nextIndex:" + listIterator.nextIndex() + " ");
+            if (element.equals("Apple")) {
+                listIterator.remove();
+            }
+        }
+        System.out.println();
+        printArray(fruits);
+
+        if (fruits.contains("Cherry")) {
+            System.out.println("Cherry is here.");
+        }
+        if (fruits.containsAll(Arrays.asList("Pear", "Cherry"))) {
+            System.out.println("Cherry and Pear is present");
+        }
+
+        List<Integer> ints = new ArrayList<>();
+        if (ints.isEmpty()) {
+            System.out.println("Array is empty");
+        }
+
+        Object[] fruitsArray = fruits.toArray();
+        for (Object object : fruitsArray) {
+            String fruitObject = (String) object;
+        }
+
+        System.out.print("Sub-list:");
+        List<String> subList = fruits.subList(1, 3);
+        printArray(subList);
+
+
+        System.out.println("Clear array - then add Apple");
+        fruits.clear();
+        fruits.add("Apple");
         printArray(fruits);
 
 
