@@ -9,6 +9,7 @@ public class FileWriting {
 
     public static void main(String[] args) {
         writeUsingBufferWriter();
+        appendUsingBufferWriter();
     }
 
 
@@ -40,7 +41,19 @@ public class FileWriting {
     public static void writeUsingBufferWriter() {
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("write_buffer.txt"));
-            bufferedWriter.write("This is a string");       //todo:append
+            bufferedWriter.write("This is a string");
+            bufferedWriter.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void appendUsingBufferWriter() {
+        try {
+            //pasam in constructorul lui FileWriter parametrul al doilea true ca sa deschida fisierul in append mode
+            //asa, putem scrie la finalul unui fisier, fara sa il suprascriem, folosind metoda append
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("write_buffer.txt", true));
+            bufferedWriter.append("This is an appended string");
             bufferedWriter.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
