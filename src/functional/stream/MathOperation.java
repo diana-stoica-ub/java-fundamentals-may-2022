@@ -19,7 +19,9 @@ public class MathOperation {
             System.out.println("Maxim is empty");
         }
 
-        Optional<Integer> min = list.stream().min(Integer::compareTo);
+        Optional<Integer> min = list.stream().min(Integer::compareTo);      //method reference operator
+        list.stream().min((n1, n2) -> Integer.compare(n1, n2));
+
         if (min.isPresent()) {
             System.out.println("Min is: " + min.get());
         } else {
